@@ -10,6 +10,7 @@ ENV POWER medium
 
 #install updates
 RUN apt update && apt upgrade -y
+RUN apt install wget -y
 
 # download the folding at home client
 # currently version 7.5.1
