@@ -9,7 +9,7 @@ ENV TEAM 223518
 ENV POWER medium
 
 #install updates
-RUN sudo apt update && sudo apt upgrade -y
+RUN apt update && apt upgrade -y
 
 # download the folding at home client
 # currently version 7.5.1
