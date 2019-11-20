@@ -13,7 +13,8 @@ RUN apt update && apt upgrade -y
 
 # download the folding at home client
 # currently version 7.5.1
-RUN dpkg -i https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.5/fahclient_7.5.1_amd64.deb
+RUN wget https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.5/fahclient_7.5.1_amd64.deb -O fahclient.deb \
+    && dpkg -i fahclient.deb
 
 ADD config.xml /etc/fahclient/
 RUN chown fahclient:root /etc/fahclient/config.xml
